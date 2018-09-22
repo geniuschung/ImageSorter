@@ -80,7 +80,9 @@ public class ImageSorterEventListener implements MouseListener , SelectionListen
 		if(e.getSource() == imageSorterSWT.getOrgDirDialog()){
 			String selOrgDir = openDir();
 			if(selOrgDir != null){
+				
 				imageSorterSWT.getOrgDirText().setText(selOrgDir);
+				
 			}
 		}else if(e.getSource() == imageSorterSWT.getTarDirDialog()){
 			String selTarDir = openDir();
@@ -106,8 +108,6 @@ public class ImageSorterEventListener implements MouseListener , SelectionListen
 			}else{
 				imageSorterSWT.getInfoText().setText(imageSorterSWT.getInfoText().getText()+"\n\n디렉토리 정보를 입력하세요");
 			}
-			
-			ImageSorterService ISSerivce = new ImageSorterService();
 			
 		}
 		// TODO Auto-generated method stub
